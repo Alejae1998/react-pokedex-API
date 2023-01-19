@@ -1,14 +1,12 @@
 import React from 'react';
-import { fetchPokemon } from '../../services/fetchPokemom.js';
 
-export default function Card({ pokemon, url_image }) {
-    async function pokemonSubmit(e) {
-        e.preventDefault
-    }
+export default function Card({ pokemon, url_image, height, hp }) {
   return (
-    <div className='pokemon-card'>
-      <h2>{pokemon}</h2>
-      <img src={url_image}></img>
+    <div className="pokemon-card">
+      <img src={url_image} />
+      <h1>NAME: {pokemon}</h1>
+      <p>HEIGHT:{height}</p>
+      <p>HP: {hp}</p>
     </div>
   );
 }

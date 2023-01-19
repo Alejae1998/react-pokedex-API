@@ -27,7 +27,3 @@ export function usePokemon() {
   };
   return { pokemon, types, handleTypeChange, search, setSearch };
 }
-
-const handlePokemonSearch = async () => {
-
-};

@@ -1,20 +1,16 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { fetchByName } from '../../services/fetchPokemom.js';
-export default function Search({ search, setSearch }) {
-  async function handleChange(e) {
+export default function Search({ search, setSearch, handleNameSearch }) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    const {
-      data: { results },
-    } = await fetchByName(search);
-
-    setSearch(results);
+    handleNameSearch(search);
   }
 
   return (
-    <form onSubmit={handleChange}>
+    <form onSubmit={handleSubmit}>
       <input onChange={(e) => setSearch(e.target.value)} value={search}></input>
-      <button>Search</button>
+      <button type="submit">Search</button>
     </form>
   );
 }

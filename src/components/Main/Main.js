@@ -3,7 +3,8 @@ import Select from '../Select.js/Select.js';
 import Search from '../Search/Search.js';
 import Card from '../Card/Card.js';
 export default function Main() {
-  const { pokemon, types, handleTypeChange, search, setSearch, loading } = usePokemon();
+  const { pokemon, types, handleTypeChange, search, setSearch, loading, handleNameSearch } =
+    usePokemon();
   if (loading)
     return (
       <p>
@@ -13,7 +14,7 @@ export default function Main() {
   return (
     <>
       <Select types={types} handleTypeChange={handleTypeChange} />
-      <Search search={search} setSearch={setSearch} />
+      <Search search={search} setSearch={setSearch} handleNameSearch={handleNameSearch} />
       <div className="card-holder">
         {pokemon.map((poke) => (
           <Card key={poke._id} {...poke} />

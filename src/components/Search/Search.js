@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { fetchByName } from '../../services/fetchPokemom.js';
 export default function Search({ search, setSearch, handleNameSearch }) {
   async function handleSubmit(e) {
     e.preventDefault();

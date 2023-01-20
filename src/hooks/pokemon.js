@@ -5,10 +5,13 @@ export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [types, setTypes] = useState([]);
   const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const data = await fetchPokemon();
       setPokemon(data);
+      setLoading(false);
     };
     fetchData();
   }, []);
@@ -25,5 +28,5 @@ export function usePokemon() {
     const data = await fetchPokemonType(type);
     setPokemon(data);
   };
-  return { pokemon, types, handleTypeChange, search, setSearch };
+  return { pokemon, types, handleTypeChange, search, setSearch, loading };
 }

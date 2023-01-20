@@ -14,7 +14,7 @@ export default function Main() {
     <>
       <Select types={types} handleTypeChange={handleTypeChange} />
       <Search search={search} setSearch={setSearch} />
-      <div>
+      <div className="card-holder">
         {pokemon.map((poke) => (
           <Card key={poke._id} {...poke} />
         ))}

@@ -1,22 +1,24 @@
-.App {
-  text-align: center;
-  color: black;
+* {
+  background-color: #ccffe6;
 }
-
+h1 {
+  font-size: 1rem;
+}
 .pokemon-card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding: 2px 16px;
-  border-radius: 5px;
+  border-radius: 5px; */
   font-size: 1.2rem;
 }
 
 .pokemon-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .image {
   height: 200px;
+  align-items: center;
 }
 
 .App-logo {
@@ -75,11 +77,11 @@
 }
 
 .flip-card {
-  background-color: transparent;
   width: 300px;
   height: 200px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -98,7 +100,8 @@
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -108,13 +111,13 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: #80ffbf;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #e6fff2;
+  color: black;
   transform: rotateY(180deg);
 }

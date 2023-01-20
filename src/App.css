@@ -1,5 +1,21 @@
 .App {
   text-align: center;
+  color: black;
+}
+
+.pokemon-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 2px 16px;
+  border-radius: 5px;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.image {
+  height: 200px;
 }
 
 .App-logo {
@@ -36,6 +52,7 @@
     transform: rotate(360deg);
   }
 }
+
 .loader {
   width: 48px;
   height: 48px;

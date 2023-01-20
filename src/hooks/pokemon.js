@@ -4,7 +4,7 @@ import { fetchPokemon, fetchPokemonType, fetchTypes } from '../services/fetchPok
 export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [types, setTypes] = useState([]);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);

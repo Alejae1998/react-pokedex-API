@@ -1,5 +1,29 @@
-.App {
-  text-align: center;
+* {
+  background-color: #ccffe6;
+}
+h1 {
+  font-size: 1rem;
+}
+.pokemon-card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 2px 16px;
+  border-radius: 5px; */
+  font-size: 1.2rem;
+}
+.card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  height: 200px;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +59,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flip-card {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #80ffbf;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #e6fff2;
+  color: black;
+  transform: rotateY(180deg);
 }
